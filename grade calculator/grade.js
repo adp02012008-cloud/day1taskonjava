@@ -1,6 +1,6 @@
-console.log("-----------WELCOME TO GRADE CALCULATOR----------");
+console.log("WELCOME TO GRADE CALCULATOR");
 //Student mark input as string
-let StudentMark="85";
+let StudentMark="40";
 
 //Conversion to number
 let mark=Number(StudentMark);
