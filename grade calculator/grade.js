@@ -1,6 +1,6 @@
 console.log("WELCOME TO GRADE CALCULATOR");
 //Student mark input as string
-let StudentMark="40";
+let StudentMark="45";
 
 //Conversion to number
 let mark=Number(StudentMark);
@@ -27,3 +27,4 @@ switch(true){
     default:
         console.log("Invalid input(marks)");
 }
+

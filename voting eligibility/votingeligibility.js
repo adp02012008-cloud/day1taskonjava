@@ -18,7 +18,6 @@ function checkVotingEligibility() {
         var again = confirm("Do you want to check again?");
     } while (again);
 
-    // Exit message
     alert("Goodbye!");
 }
 
