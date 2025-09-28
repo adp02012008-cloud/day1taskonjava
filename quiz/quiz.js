@@ -1,7 +1,7 @@
 let score = 0;
 
 // Question 1
-let q1 = prompt("Q1: What is 2 + 2?\n1) 3\n2) 4\n3) 5");
+let q1 = prompt("Q1: What is 5 * 2 ?\n1) 3\n2) 10\n3) 5");
 switch (q1) {
     case "2":
         score++;
@@ -9,7 +9,7 @@ switch (q1) {
 }
 
 // Question 2
-let q2 = prompt("Q2: Which is the capital of France?\n1) Paris\n2) Rome\n3) Berlin");
+let q2 = prompt("Q2: Which is the largest population contry?\n1) India\n2) China\n3) Russia");
 switch (q2) {
     case "1":
         score++;
@@ -17,7 +17,7 @@ switch (q2) {
 }
 
 // Question 3
-let q3 = prompt("Q3: Which is the largest planet?\n1) Earth\n2) Jupiter\n3) Mars");
+let q3 = prompt("Q3: India's current prime minister ?\n1) Putin\n2) Modi\n3) Kim");
 switch (q3) {
     case "2":
         score++;

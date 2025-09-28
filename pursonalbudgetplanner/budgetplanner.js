@@ -4,12 +4,12 @@
 let income = +prompt("Enter your Monthly Income (e.g., 5000):");
 
 // 2. Get Expenses for multiple categories and convert them to numbers
-let rent = +prompt("Enter your Rent expense (e.g., 2000):");
+let houserent = +prompt("Enter your Rent expense (e.g., 2000):");
 let groceries = +prompt("Enter your Groceries expense (e.g., 1500):");
 let transport = +prompt("Enter your Transport expense (e.g., 1000):");
 
 // 3. Math functions: Add expenses to get total expense
-let totalExpenses = rent + groceries + transport;
+let totalExpenses = houserent + groceries + transport;
 
 // Calculate remaining balance and percentage spent
 let remainingBalance = income - totalExpenses;
