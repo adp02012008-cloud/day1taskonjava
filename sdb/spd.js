@@ -19,7 +19,7 @@ if (stdcheck==std)
         let time=date.getHours();
         if (time<12){
             alert("good morning!");
-        }else if(time>12&&time<4){
+        }else if(time>=12&&time<=4){
             alert("Good afternoon!");
         }else{
             alert("Good evening!");
@@ -35,3 +35,11 @@ else
 {
     alert("Wrong Credentials!");
 }
+
+let studentinfo={
+    name:stdcheck,
+
+};
+
+
+alert(stringify)

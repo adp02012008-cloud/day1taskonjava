@@ -26,7 +26,6 @@
 
     // --- Main Logic Flow ---
     
-    alertOutput("Welcome to the Dashboard", getGreeting());
 
     // --- 1, 2, 6, 7: Profile, Age, JSON, Errors ---
     function saveProfile() {

@@ -13,7 +13,8 @@ const quizData = [
   {question: 'Capital of India?', options: ['Delhi', 'Mumbai', 'Bangalore'], answer: 'Delhi'},
   {question: '5 + 7 = ?', options: ['10', '12', '11'], answer: '12'},
   {question: 'Largest planet?', options: ['Earth', 'Mars', 'Jupiter'], answer: 'Jupiter'},
-  {question: 'highest population?', options: ['China', 'America', 'India'], answer: 'India'}
+  {question: 'highest population?', options: ['China', 'America', 'India'], answer: 'India'},
+  {question: 'highest gdp nation?' ,options:['Usa','India','China'],answer: 'India'}
 ];
 
 // Registration form validation
