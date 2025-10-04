@@ -9,7 +9,7 @@ function librarySystem() {
 
         if (borrow) {
             // Step 3: Ask for book category
-            let category = prompt("Enter book category:\n1 = Fiction\n2 = Science\n3 = History");
+            let category = prompt("Enter book category:\n1 = Fiction\n2 = Science\n3 = History\n4 = abc");
 
             // Convert to number
             category = Number(category);
@@ -24,6 +24,9 @@ function librarySystem() {
                     break;
                 case 3:
                     alert("You selected History");
+                    break;
+                case 4:
+                    alert("You selected abc")
                     break;
                 default:
                     alert("Invalid category!");

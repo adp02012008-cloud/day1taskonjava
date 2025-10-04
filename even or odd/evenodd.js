@@ -1,7 +1,7 @@
 console.log("EVEN OR ODD DAY MESSSAGE");
 
 //STRING INPUT  
-let StringNumber="10";
+let StringNumber="11";
 
 //CONVERSION TO NUMBER
 let num=Number(StringNumber);
