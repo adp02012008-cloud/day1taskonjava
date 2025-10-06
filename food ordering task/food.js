@@ -1,6 +1,4 @@
-// Online Food Ordering System
 try {
-    // Step 1: Ask for user’s name
     const name = prompt("Enter your name:");
 
     if (!name) {
@@ -8,14 +6,15 @@ try {
         throw "Name not entered";
     }
 
-    // Step 2: Confirm order
+
+    // Step 1: Confirm order
     const wantsToOrder = confirm(`Hello ${name}! Do you want to order food?`);
     if (!wantsToOrder) {
         alert("Goodbye! See you next time!");
         throw "Order cancelled";
     }
 
-    // Step 3: Display menu
+    // Step 2: Display menu
     const menu = {
         1: { item: "Pizza", price: 150 },
         2: { item: "Burger", price: 100 },
@@ -35,7 +34,7 @@ try {
         throw "Invalid choice";
     }
 
-    // Step 4: Ask for quantity
+    // Step 3: Ask for quantity
     const quantity = +prompt(`Enter quantity for ${selected.item}:`);
 
     if (isNaN(quantity) || quantity < 1) {
@@ -43,7 +42,7 @@ try {
         throw "Invalid quantity";
     }
 
-    // Step 5: Process the bill using Promise
+    // Step 4: Process the bill using Promise
     const total = selected.price * quantity;
 
     const processBill = new Promise((resolve, reject) => {
@@ -54,12 +53,12 @@ try {
         }
     });
 
-    // Step 6: Show the result
+    // Step 5: Show the result
     processBill
         .then(message => alert(message))
         .catch(error => alert(error));
 
 } catch (error) {
-    // Step 7: Error handling
+    // Step 6: Error handling
     alert(`Something went wrong: ${error}`);
 }
