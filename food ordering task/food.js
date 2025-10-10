@@ -1,10 +1,10 @@
 try {
     const name = prompt("Enter your name:");
 
-    if (!name) {
-        alert("Name not entered. Exiting...");
-        throw "Name not entered";
-    }
+    if (!name || !isNaN(name)) {
+    alert("Name not entered. Exiting...");
+    throw "Name not entered";
+}
 
 
     // Step 1: Confirm order

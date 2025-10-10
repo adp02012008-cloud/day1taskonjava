@@ -1,0 +1,122 @@
+/* Overall page setup */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: url('Untitled.png') no-repeat center center/cover;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(2px);
+  z-index: -1;
+}
+
+
+/* Centered container */
+.container {
+  background: #fff;
+  margin-top: 60px;
+  padding: 30px 40px;
+  border-radius: 15px;
+  width: 360px;
+  text-align: center;
+}
+
+/* Heading */
+.container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Input + Button */
+.input-section {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #0d05b2;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+
+.input-section input:focus {
+  border-color: #075cef;
+}
+
+.input-section button {
+  background: #2575fc;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.input-section button:hover {
+  background: #1b5edb;
+}
+
+/* List styling */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+ul li {
+  background: #f2f2f2;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  
+  /* New properties */
+  word-break: break-word; /* Wrap long text */
+  overflow-wrap: break-word; /* Fallback for older browsers */
+}
+
+
+ul li:hover {
+  background: #e6e6e6;
+}
+
+/* Delete button */
+ul li button {
+  background: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+
+ul li button:hover {
+  background: #e60000;
+}
