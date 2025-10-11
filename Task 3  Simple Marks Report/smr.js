@@ -63,11 +63,6 @@ try{
         grade="Grade = Fail"
         alert("You are Fail..");
     }
-
-    console.log("Your total mark is: "+total);
-    console.log("Your average mark is: "+average);
-    console.log(grade);
-
     
 }catch(error){
     alert(`Something went wrong : ${error}`);
