@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>To-Do List</h1>
+  <input id="taskInput" placeholder="Enter task">
+  <button id="addBtn" onclick="addTask()">Add Task</button>
+
+  <ul id="taskList"></ul>
+
+  <!-- Template for tasks -->
+  <template id="taskTemplate">
+    <li>
+      <div>
+        <div class="taskName"></div>
+        <div class="date"></div>
+      </div>
+      <div class="btn-group">
+        <button class="done">✅</button>
+        <button class="delete">🗑️</button>
+      </div>
+    </li>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>

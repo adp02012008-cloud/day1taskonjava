@@ -42,20 +42,28 @@ function viewTasks() {
     return;
   }
 
-  for (let task of tasks) {
-    const li = document.createElement("li");
-    li.innerHTML = `
-      <div> 
-        <span class="${task.completed ? 'completed' : ''}">${task.name}</span>
-        <div class="date">${task.createdAt}</div>
-      </div>
-      <div class="btn-group">
-        <button class="done" onclick="markCompleted(${task.id})">✅</button>
-        <button class="delete" onclick="deleteTask(${task.id})">🗑️</button>
-      </div>
-    `;//first div calls css second div calls functions
-    taskList.appendChild(li);
-  }
+  taskList.innerHTML = ''; // clear existing tasks
+
+for (let task of tasks) {
+  const li = document.createElement("li");
+
+  li.innerHTML = `
+    <div> 
+      <span class="${task.completed ? 'completed' : ''}">${task.name}</span>
+      <div class="date">${task.createdAt}</div>
+    </div>
+    <div class="btn-group">
+      <button class="done">✅</button>
+      <button class="delete">🗑️</button>
+    </div>
+  `;
+
+  // Add button actions
+  li.querySelector('.done').onclick = () => markCompleted(task.id);
+  li.querySelector('.delete').onclick = () => deleteTask(task.id);
+
+  taskList.appendChild(li);
+}
 }
 
 // Delete Task Function

@@ -1,10 +1,3 @@
-// ABC="MY.PDF";
-// // let y="js"
-// // ABC=ABC.slice(0,3)
-// // console.log(ABC+y)
-// console.log(ABC.replace("PDF","JPG"))
-// let a=5,b=5;
-
 // if(a<0&&b<0){
 //     console.log("False")
 // }
@@ -18,6 +11,7 @@
 //     console.log("False")
 // }
 
+
 // last letter in string to first letter of string
 // let str=prompt("enter a string : ")
 // let f = str[0];
@@ -27,11 +21,20 @@
 // alert(s);
 
 
+// ABC="MY.PDF";
+// // let y="js"
+// // ABC=ABC.slice(0,3)
+// // console.log(ABC+y)
+// console.log(ABC.replace("PDF","JPG"))
+// let a=5,b=5;
+
+
 // let a=prompt("ENTER NAME OF FILE WITH EXTENTION : ");
 // let c=prompt("Enter initial extention: ")
 // let b=prompt("Change to which extention: ");
 // alert("Given file name and extention is:"+a+"."+c);
 // alert("Changed extention with file name:"+a+"."+b);
+
 
 // let x = prompt("Enter file:");
 // let y = prompt("Change extension to:");

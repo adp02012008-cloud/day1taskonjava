@@ -1,0 +1,8 @@
+body { font-family: Arial, sans-serif; background: #f0f0f0; padding: 50px; }
+    #taskInput { padding: 8px; width: 250px; }
+    #addBtn { padding: 8px 12px; }
+    ul { list-style: none; padding: 0; margin-top: 20px; }
+    li { background: #fff; padding: 10px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; border-radius: 5px; }
+    .completed { text-decoration: line-through; color: gray; }
+    .btn-group button { margin-left: 5px; }
+    .date { font-size: 12px; color: #666; }

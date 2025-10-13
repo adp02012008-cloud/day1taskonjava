@@ -18,9 +18,9 @@ let percentageSpent = (totalExpenses / income) * 100;
 // 4. If-Else: Check if total expenses exceed income
 let message;
 if (totalExpenses > income) {
-    message = "Message: You are overspending. 🚨";
+    message = "Message: You are overspending.";
 } else {
-    message = "Message: You are within budget. ✅";
+    message = "Message: You are within budget.";
 }
 
 // 5. Alert: Display all results

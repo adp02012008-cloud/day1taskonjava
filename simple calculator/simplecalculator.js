@@ -1,13 +1,13 @@
 console.log("SIMPLE CALCULATOR");
 console.log("Enter Your Input:");
-let string1="5";
-let string2="10";
+let string1=+prompt("ENter 1 no :");
+let string2=+prompt("Enter 2nd no: ");
 
 
 num1=Number(string1);
 num2=Number(string2);
 
-let op="-";
+let op=prompt("Enter the operation to be performed + - * /: ");
 
 switch(op){
     case '+':
