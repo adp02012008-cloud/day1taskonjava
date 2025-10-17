@@ -1,0 +1,28 @@
+body {
+  text-align: center;
+  background: #f2f2f2;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  background: gray;
+  display: inline-block;
+  margin: 4px;
+  cursor: pointer;
+}
+
+.selected { background: green; }
+.booked { background: red; }
+
+#pay {
+  display: none;
+  margin-top: 10px;
+}
+
+#seats {
+  display: grid;
+  grid-template-columns: repeat(5, 50px); /* multiple rows */
+  justify-content: center;
+  margin-top: 15px;
+}

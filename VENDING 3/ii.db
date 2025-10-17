@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Simple Vending Machine</title>
+</head>
+<body>
+  <h2>Simple Vending Machine</h2>
+  <p>Select a product and quantity (Max stock: 10 each):</p>
+
+  <label>Product: 
+    <select id="product">
+      <option value="Chips-30">Chips - ₹30</option>
+      <option value="Chocolate-20">Chocolate - ₹20</option>
+      <option value="Juice-25">Juice - ₹25</option>
+    </select>
+  </label>
+
+  <label>Qty: <input type="number" id="qty" min="1" value="1"></label>
+  <button onclick="addItem()">Add</button>
+
+  <h4>Availability:</h4>
+  <ul id="stockList"></ul>
+
+  <h4>Cart:</h4>
+  <ul id="cart"></ul>
+  <p>Total: ₹<span id="total">0</span></p>
+
+  <label>Discount code: <input id="code" placeholder="SAVE30"></label>
+  <button onclick="applyDisc()">Apply</button>
+
+  <h4>Payment Section</h4>
+  <p>Enter Username: <input id="user"></p>
+  <p>Enter Password: <input type="password" id="pass"></p>
+  <p>Payment: 
+    <input type="radio" name="pay" value="cash" checked>Cash
+    <input type="radio" name="pay" value="gpay">GPay
+  </p>
+  <button onclick="pay()">Pay</button>
+
+  <p id="msg"></p>
+
+  <script>
+    let total=0, discount=false;
+    const stock={Chips:10, Chocolate:10, Juice:10};
+    const cart={};
+
+    function showStock(){
+      let html='';
+      for(let p in stock){html+=`<li>${p}: ${stock[p]} left</li>`;}
+      document.getElementById('stockList').innerHTML=html;
+    }
+
+    function addItem(){
+      const val=document.getElementById('product').value.split('-');
+      const name=val[0], price=+val[1];
+      const qty=+document.getElementById('qty').value;
+      if(qty>stock[name]){alert('Not enough stock available!');return;}
+      if(cart[name]) cart[name].qty+=qty; else cart[name]={price,qty};
+      if(cart[name].qty>stock[name]){alert('Quantity exceeds stock!');cart[name].qty=stock[name];}
+      updateCart();
+    }
+
+    function updateCart(){
+      let html='',sum=0;
+      for(let i in cart){
+        html+=`<li>${i} x${cart[i].qty}</li>`;
+        sum+=cart[i].price*cart[i].qty;
+      }
+      total=sum;
+      document.getElementById('cart').innerHTML=html;
+      showTotal();
+    }
+
+    function applyDisc(){
+      const code=document.getElementById('code').value.trim().toUpperCase();
+      discount=(code==='SAVE30');
+      showTotal();
+    }
+
+    function showTotal(){
+      let amt=discount?total*0.7:total;
+      document.getElementById('total').textContent=amt.toFixed(2);
+    }
+
+    function pay(){
+      const user=document.getElementById('user').value.trim();
+      const pass=document.getElementById('pass').value.trim();
+      if(total===0){msg('No items selected');return;}
+      if(user!=='user' || pass!=='1234'){msg('Invalid username or password');return;}
+      const success=Math.random()<0.9;
+      if(success){
+        for(let k in cart){stock[k]-=cart[k].qty;if(stock[k]<0)stock[k]=0;}
+        msg('Payment successful! Products dispatched.');
+        for(let k in cart) delete cart[k];total=0;discount=false;
+        updateCart();showStock();
+      } else msg('Payment failed!');
+    }
+
+    function msg(t){document.getElementById('msg').textContent=t;}
+
+    showStock();
+  </script>
+</body>
+</html>
+
+function clearCart() {
+  for (let item in cart) delete cart[item];
+  total = 0;
+  discount = false;
+  updateCart();
+  alert('Cart cleared!');
+}
+
+<button onclick="clearCart()">Clear Cart</button>
+
+
+// remove a specific item from the cart
+function removeItem(name) {
+  if (cart[name]) {
+    delete cart[name];
+    updateCart();
+    alert(name + ' removed from cart.');
+  }
+}
+
+html += `<li>${item} x${cart[item].qty} 
+      <button onclick="removeItem('${item}')">Remove</button></li>`;
+    sum += cart[item].price * cart[item].qty;

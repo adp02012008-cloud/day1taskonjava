@@ -1,0 +1,55 @@
+#vendingmac{ 
+    text-align: center;
+    font-size:xx-large;
+}
+
+#products{
+    display:flex;
+    flex-wrap:wrap;
+    gap:32px;
+    justify-content:center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.productsinside{
+    width: 260px;
+    background:#fff;
+    border-radius:25px;
+    box-shadow:0 2px 8px #eee;
+    padding:16px;
+    text-align:center;    
+}
+
+#cartdiv{
+    width: 400px;
+    background:#fff;
+    border-radius:25px;
+    margin-top: 50px;
+    box-shadow:0 2px 8px #eee; 
+    padding:16px;
+    text-align:left;
+}
+
+#paydiv{
+    width: 400px;
+    background:#fff;
+    border-radius:25px;
+    margin-top: 50px;
+    box-shadow:0 2px 8px #eee;
+    padding:16px;
+    text-align:left;
+}
+
+#paybtn{
+    margin-left: 150px;
+}
+
+#cartpay{
+    display:flex;
+    flex-wrap:wrap;
+    gap:32px;
+    justify-content:center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}

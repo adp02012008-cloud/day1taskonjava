@@ -49,7 +49,7 @@ for (let task of tasks) {
 
   li.innerHTML = `
     <div> 
-      <span class="${task.completed ? 'completed' : ''}">${task.name}</span>
+      <div class="${task.completed ? 'completed' : ''}">${task.name}</div>
       <div class="date">${task.createdAt}</div>
     </div>
     <div class="btn-group">

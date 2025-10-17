@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Simple Vending Machine</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <h2>Simple Vending Machine</h2>
+  <p>Select a product and quantity:</p>
+
+  <label>Product: 
+    <select id="product">
+      <option value="Chips-30">Chips - ₹30</option>
+      <option value="Chocolate-20">Chocolate - ₹20</option>
+      <option value="Juice-25">Juice - ₹25</option>
+    </select>
+  </label>
+
+  <label>Qty: <input type="number" id="qty" min="1" value="1"></label>
+  <button onclick="addItem()">Add</button>
+
+  <h4>Cart:</h4>
+  <ul id="cart"></ul>
+  <p>Total: ₹<span id="total">0</span></p>
+
+  <label>Discount code: <input id="code" placeholder="SAVE30"></label>
+  <button onclick="applyDisc()">Apply</button>
+
+  <p>Payment: 
+    <input type="radio" name="pay" value="cash" checked>Cash
+    <input type="radio" name="pay" value="gpay">GPay
+  </p>
+  <button onclick="pay()">Pay</button>
+
+  <p id="msg"></p>
+
+</body>
+</html>

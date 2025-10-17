@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vending Machine</title>
+    <link rel="stylesheet" href="vending.css">
+    <script defer src="vending.js"></script>
+</head>
+<body>
+    <div class="over" >
+
+        <div class="sepdiv" data-id="munch" data-name="Munch" data-price="30">
+                <img src="munch.jpeg" alt="MUNCH" class="image" >
+                <div class="quantity-selector" >
+                    <p class="product-name">Munch</p>
+                    <p class="product-price">Price: ₹30</p>
+                    <label>Quantity</label>
+                    <input type="number" class="quantity-input" id="mun" value="0" min="0" max="10">
+                    <button onclick="checkvalid()" id="btnmun" class="add-to-cart">Add to cart</button>
+                </div>
+    	</div>
+
+        <div class="sepdiv" data-id="lays" data-name="Lays" data-price="25">
+                <img src="lays.jpeg" alt="lays" class="image">
+                <div class="quantity-selector">
+                    <p class="product-name">Lays</p>
+                    <p class="product-price">Price: ₹25</p>
+                    <label>Quantity</label>
+                    <input type="number" class="quantity-input" id="lay" value="0" min="0" max="10">
+                    <button onclick="checkvalid()" class="add-to-cart">Add to cart</button>
+                </div>
+    	</div>
+
+        <div class="sepdiv" data-id="kur" data-name="Kur" data-price="20">
+                <img src="kur.jpeg" alt="kur" class="image">
+                <div class="quantity-selector">
+                    <p class="product-name">Kur</p>
+                    <p class="product-price">Price: ₹20</p>
+                    <label>Quantity</label>
+                    <input type="number" class="quantity-input" id="kurk" value="0" min="0" max="10">
+                    <button onclick="checkvalid()" class="add-to-cart">Add to cart</button>
+                </div>
+    	</div>
+
+        <div class="sepdiv" data-id="kit" data-name="KitKat" data-price="40">
+                <img src="kit.jpeg" alt="kit" class="image">
+                <div class="quantity-selector">
+                    <p class="product-name">KitKat</p>
+                    <p class="product-price">Price: ₹40</p>
+                    <label>Quantity</label>
+                    <input type="number" class="quantity-input" id="kitk" value="0" min="0" max="10">
+                    <button onclick="checkvalid()" class="add-to-cart">Add to cart</button>
+                </div>
+    	</div>
+
+
+    </div>
+
+    
+    
+    
+</body>
+</html>

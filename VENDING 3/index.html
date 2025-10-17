@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Simple Vending Machine</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2 id="vendingmac">Vending Machine</h2>
+
+
+  <div id="products">
+    <div id="chipsdiv" class="productsinside">
+      <img src="munch.jpeg" alt="MUNCH" id="munchimage" >
+      <h3>Chips - ₹30</h3>
+      <p>Available: <span id="stock-Chips">10</span></p>
+      <label>Quantity: <input type="number" id="qty-Chips" min="0" value="0" max="10"></label>
+      <button onclick="addItem('Chips',30)">Add Chips</button>
+    </div>
+    <div id="Chocolatediv" class="productsinside">
+      <img src="kit.jpeg" alt="KitKat" id="munchimage" >
+      <br><br><br><br><br>
+      <h3>KitKatChocolate - ₹20</h3>
+      <p>Available: <span id="stock-Chocolate">10</span></p>
+      <label>Quantity: <input type="number" id="qty-Chocolate" min="0" value="0" max="10"></label>
+      <button onclick="addItem('Chocolate',20)">Add KitKat</button>
+    </div>
+    <div id="juicediv"class="productsinside">
+      <img src="juice.jpeg" alt="juice" id="munchimage" >
+      <br><br>
+      <h3>Juice - ₹25</h3>
+      <p>Available: <span id="stock-Juice">10</span></p>
+      <label>Quantity: <input type="number" id="qty-Juice" min="0" value="0" max="10"></label>
+      <button onclick="addItem('Juice',25)">Add Juice</button>
+    </div>
+    <div id="biscuitsdiv"class="productsinside">
+      <img src="biscuits.jpeg" alt="Biscuits" id="biscuitsimage" >
+      <br><br><br><br>
+      <h3>Biscuits - ₹10</h3>
+      <p>Available: <span id="stock-biscuits">10</span></p>
+      <label>Quantity: <input type="number" id="qty-biscuits" min="0" value="0" max="10"></label>
+      <button onclick="addItem('biscuits',30)">Add Biscuits</button>
+    </div>
+  </div>
+  <div id="cartpay">
+    <div id="cartdiv">
+        <h4>Cart:</h4>
+        <ul id="cart"></ul>
+        <p>Total: ₹<span id="total">0</span></p>
+        <label>Discount code: <input id="code" placeholder="Enter Discount code"></label>
+        <button onclick="applyDisc()">Apply</button>
+    </div>
+    <div id="paydiv">
+        <h4>Payment Section</h4>
+        <p>Enter Username: <input id="user"></p>
+        <p>Enter Password: <input type="password" id="pass"></p>
+        <p>Payment: 
+          <input type="radio" name="pay" value="gpay">GPay
+        </p>
+        <button id="paybtn" onclick="pay()">Pay</button>
+    </div>
+  </div>
+  <p id="msg"></p>
+
+</body>
+</html>
